@@ -1,9 +1,11 @@
-const keyId = "8c0c3b7f"
-const baseURL = "http://www.omdbapi.com/";
+const keyId = "955d9bce"
+const baseURL = "https://www.omdbapi.com/";
 
 async function fetchMovie(title) {
     try {
         const response = await fetch(`${baseURL}?apiKey=${keyId}&t=${encodeURIComponent(title)}`);
+        console.log(`${baseURL}?apiKey=${keyId}&t=${encodeURIComponent(title)}`);
+        console.log(response)
         if (!response) throw new Error("Error when obtainn data");
         const data = await response.json();
         console.log(data)
