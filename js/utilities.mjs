@@ -38,7 +38,7 @@ utility.renderWithTemplate = (template, parentElement, data, callback) => {
 }
 
 utility.loadHeader = async () => {
-    const headerTemplate = await utility.loadTemplate("../public/partials/header.html");
+    const headerTemplate = await utility.loadTemplate("https://raw.githubusercontent.com/EduardOrellana/WDD330-CINEMA-ORELLANA/refs/heads/main/public/partials/header.html");
     if (headerTemplate) {
         const headerElement = document.querySelector("header");
         utility.renderWithTemplate(headerTemplate, headerElement);
@@ -65,7 +65,7 @@ utility.hambutton = () => {
 }
 
 utility.loadFooter = async () => {
-    const footerTemplate = await utility.loadTemplate("../public/partials/footer.html");
+    const footerTemplate = await utility.loadTemplate("https://raw.githubusercontent.com/EduardOrellana/WDD330-CINEMA-ORELLANA/refs/heads/main/public/partials/footer.html");
     if (footerTemplate) {
         const footerElement = document.querySelector("footer");
         utility.renderWithTemplate(footerTemplate, footerElement)
